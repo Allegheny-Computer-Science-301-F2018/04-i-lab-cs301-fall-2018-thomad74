@@ -1,5 +1,6 @@
 # Name: Dillon Thoma
 # Date: 12 October 2018
+# This work is mine unless otherwise cited.
 
 # Run the below only if the library is not already installed.
 # install.packages(dslabs)
@@ -10,12 +11,23 @@ library(tidyverse)
 data(us_contagious_diseases)
 
 #Question 1.
+
 dat <- filter(us_contagious_diseases, disease == "Measles", state != "Alaska" & state != "Hawaii")
 dat <- mutate(dat, per100000rate = ((count*100000)/population) * ((weeks_reporting)/52))
+
+#filtering the data to specifically measles in all states but alaska and hawaii
+#mutating the data using the formula for per100000rate in the pdf
+
 #Question 2.
+
 data_cali <- filter(dat, disease == "Measles", state == "California")
 ggplot(data = data_cali, mapping = aes(x = year, y = per100000rate)) + geom_line() + geom_vline(xintercept = 1965)
+
+#filtering the data to specifically measles in the state of california
+#plotting the created data set data_cali by year and per100000rate
+
 #Question 3.
+
 dat_caliFocus <- filter(us_contagious_diseases, state == "California")
 
 dat_caliFocus$yearBlock[dat_caliFocus$year >= 1950] <- "1950’s"
@@ -32,7 +44,15 @@ hjust = 1, vjust=-0.01))
 ggplot(data = dat_caliFocus) + geom_bar(mapping = aes(x = state, y = sqrt(count), fill = yearBlock), 
 position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, 
 hjust = 1, vjust=-0.01))
+
+#filtering the data to strictly california
+#selecting the specified years that are required for the data set
+#filtering out the na responses from the data
+#plotting the new data set using a bar graph
+#plotting the same data using the square root function on the count
+
 #Question 4.
+
 dat_Focus <- filter(us_contagious_diseases)
 
 dat_Focus$yearBlock[dat_Focus$year >= 1950] <- "1950's"
@@ -45,8 +65,11 @@ dat_Focus <- filter(dat_Focus, yearBlock != "NA")
 ggplot(data = dat_Focus) + geom_bar(mapping = aes(x = state, y = sqrt(count), fill = yearBlock), 
 position = "dodge", stat = "identity") + theme(axis.text.x = element_text(angle = 90, 
 hjust = 1, vjust=-0.01))
+
+#this is the same justification as number three, except a new data set was created to include all data, not just california
                                                                                                                                                                           
 #Question 5.
+
 dat_Focus <- filter(us_contagious_diseases)
 
 dat_Focus$yearBlock[dat_Focus$year >= 1950] <- "1950's"
@@ -61,6 +84,9 @@ dat_Focus <- mutate(dat_Focus, per100000rate = ((count*100000)/population) * (we
 ggplot(data = dat_Focus) + geom_bar(mapping = aes(x = state, y = count, fill = yearBlock), 
 position = "dodge", stat = "identity") + geom_tile(mapping = aes(x=state, y=count, color = per100000rate)) + 
 theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
+
+#this is the same justification as number four, plus the addition of the geom_tile which looks more closely at the per100000rate on the previous graph
+
 #Question 6.
 
 
