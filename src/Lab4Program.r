@@ -89,7 +89,19 @@ theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=-0.01))
 
 #Question 6.
 
+autismData <- read.csv("~/cs301F2018/classDocs/labs/04_lab/04-i-lab-cs301-fall-2018-thomad74/src/autismData.csv", comment.char="#")
 
+dat_Autism <- filter(autismData)
 
+ggplot(data = dat_Autism) + geom_line(mapping = aes(x = Year.., y = Net.Growth))
 
+#the first step is importing the data to rstudio from my files
+#filter the data into a new set called dat_Autism
+#create a graph that takes the autismData and graphs it based on net growth by year
+
+#The graph shows an increase in autism from 1985 to 2006, but that does not necessarily mean that it is due
+#to the vaccines. It may be because of more people understanding the diagnoses and reporting them, as well as
+#medical advancements that allow people to be more informed. There is no real data that can 100% prove that
+#autism is directly related to vaccines, but there is in fact an increase in autism cases as vaccinations increased.
+#Correlation does not imply causation.
 
