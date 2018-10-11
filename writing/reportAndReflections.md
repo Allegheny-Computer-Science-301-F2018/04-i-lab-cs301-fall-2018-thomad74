@@ -37,7 +37,7 @@ in a project to determine whether vaccines are beneficial, in any capacity. -->
  http://www.who.int/ncds/surveillance/gshs/VEAH2003_public_use_codebook.pdf
  http://www.who.int/ncds/surveillance/gshs/VEBH2003_public_use_codebook.pdf
 
-These two publicly available data sets for the WHO could potentially be used in a project to determine whether vaccines are beneficial because they show statistics about students in two different parts of Venezuela and how they differ. The articles explain that "The GSHS is a relatively low-cost school-based survey which uses a self-administered questionnaire to obtain data on young people's health behavior and protective factors related to the leading causes of morbidity and mortality among children and adults worldwide." This can be applied to children who are vaccinated versus those who are not, and analyzed to produce some sort of study as to why vaccines are beneficial.
+These two publicly available data sets from the WHO could potentially be used in a project to determine whether vaccines are beneficial because they show statistics about students in two different parts of Venezuela and how they differ. The articles explain that "The GSHS is a relatively low-cost school-based survey which uses a self-administered questionnaire to obtain data on young people's health behavior and protective factors related to the leading causes of morbidity and mortality among children and adults worldwide." This can be applied to children who are vaccinated versus those who are not, and analyzed to produce some sort of study as to why vaccines are beneficial.
 
 Question 10.
 
